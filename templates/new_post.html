@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style type='text/css'>
+    .error {
+        color: red;
+    }
+</style>
 <form method="post">
     <table>
         <tbody>
@@ -10,7 +15,7 @@
                 </td>
                 <td>
                     <input name="title" type="text" value= {{ title }}>
-                    <span>{{error_title}}</span>
+                    <span class='error'>{{error_title}}</span>
                 </td>
             </tr>
             <tr>
@@ -19,7 +24,7 @@
                 </td>
                 <td>
                     <textarea name="blogcontent">{{ blogcontent }}</textarea>
-                    <span>{{error_content}}</span>
+                    <span class='error'>{{error_content}}</span>
                 </td>
             </tr>
             <tr>
